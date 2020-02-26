@@ -8,11 +8,11 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.*;
 
 public class TextProcessor {
     public static List<String> remedies;
-
+    public static Map<String,Integer> occurences;
     public TextProcessor(){
     }
 
@@ -44,8 +44,22 @@ public class TextProcessor {
     }
 
     public static Map<String, Integer> findOccurences(){
-        remedies.stream().collect(Collectors.groupingBy(Function.<String>identity(), HashMap::new, counting())).entrySet()
+        /*remedies.stream().collect(Collectors.groupingBy(Function.<String>identity(), HashMap::new, counting())).entrySet()
                 .forEach(System.out::println);
-        return null;
+        return null;*/
+        Map<String, Integer> collect =
+                remedies.stream().collect(groupingBy(Function.identity(), summingInt(e -> 1)));
+        occurences = collect.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (v1, v2) -> {
+                            throw new IllegalStateException();
+                        },
+                        LinkedHashMap::new
+                ));
+        return occurences;
     }
 }

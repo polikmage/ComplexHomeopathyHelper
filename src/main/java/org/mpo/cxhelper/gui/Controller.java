@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 
 public class Controller {
@@ -39,7 +40,8 @@ public class Controller {
 
     public void btnp_findOccurences(ActionEvent event){
         System.out.println("Button findOccurences was pressed!");
-        TextProcessor.findOccurences();
+        Map<String, Integer> occurences =  TextProcessor.findOccurences();
+        occurences.entrySet().forEach(m->text_areaOccurences.appendText(m.getKey() + "  :  "+ m.getValue()+"\n"));
     }
 
     public void btnp_loadFile(ActionEvent event) throws IOException {
