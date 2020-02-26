@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mpo.cxhelper.gui.Controller">
+   <children>
+      <Button fx:id="btn_findOccurences" layoutX="521.0" layoutY="707.0" mnemonicParsing="false" onAction="#btnp_findOccurences" prefHeight="40.0" prefWidth="116.0" text="Find Occurences" />
+      <TextArea fx:id="text_areaFileShow" layoutX="14.0" layoutY="53.0" prefHeight="642.0" prefWidth="500.0" text="C:\Users\marek.pola\Documents\moje\homeo" />
+      <TextArea fx:id="text_areaOccurences" layoutX="521.0" layoutY="53.0" prefHeight="642.0" prefWidth="500.0" />
+      <Button fx:id="btn_loadFile" layoutX="398.0" layoutY="707.0" mnemonicParsing="false" onAction="#btnp_loadFile" prefHeight="40.0" prefWidth="116.0" text="Load File" />
+   </children>
+</Pane>
