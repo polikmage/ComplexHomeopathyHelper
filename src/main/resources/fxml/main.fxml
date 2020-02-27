@@ -8,6 +8,8 @@
       <Button fx:id="btn_findOccurences" layoutX="521.0" layoutY="707.0" mnemonicParsing="false" onAction="#btnp_findOccurences" prefHeight="40.0" prefWidth="116.0" text="Find Occurences" />
       <TextArea fx:id="text_areaFileShow" layoutX="14.0" layoutY="53.0" prefHeight="642.0" prefWidth="500.0" text="C:\Users\marek.pola\Documents\moje\homeo" />
       <TextArea fx:id="text_areaOccurences" layoutX="521.0" layoutY="53.0" prefHeight="642.0" prefWidth="500.0" />
-      <Button fx:id="btn_loadFile" layoutX="398.0" layoutY="707.0" mnemonicParsing="false" onAction="#btnp_loadFile" prefHeight="40.0" prefWidth="116.0" text="Load File" />
+      <Button fx:id="btn_loadFile" layoutX="396.0" layoutY="706.0" mnemonicParsing="false" onAction="#btnp_loadFile" prefHeight="40.0" prefWidth="116.0" text="Load File" />
+      <TextField fx:id="text_fieldFind" layoutX="852.0" layoutY="714.0" onAction="#handle_text_field_key_pressFind" />
+      <Label layoutX="809.0" layoutY="718.0" text="Search" />
    </children>
 </Pane>
