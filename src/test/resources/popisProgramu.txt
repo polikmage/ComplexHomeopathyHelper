@@ -1,0 +1,19 @@
+ComplexHelper
+1. function - compute occurences of words in a text file and show them 
+Flow
+
+Load File Button
+Load txt file to a string buffer?
+Show in and editor as an array of words
+
+FindOccurences Button
+Compute word occurences in a string
+Order words by number of occurences
+Show result in such way:
+
+Save occurences to a file Button
+
+Example
+
+nux.v. 10
+Ign. 6

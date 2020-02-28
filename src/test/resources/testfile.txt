@@ -1,0 +1,6 @@
+MIND;
+EMOTIONS;
+Jealousy -- Apis., Hyos., Lach., *      Staph., Arg. n;
+MOOD, DISPOSITION;
+Indecisive, irresolute -- *Staph., Arg.        n., Aur., Bar. c., Calc. sil., Caust., Graph., Ign., Nux m., Nux v., Puls.;
+Melancholic, despondent, depressed, low-spirited, gloomy, Apprehensive, 'blues' -- Abies n., Acon., Æsc., Agn., Alfal., Alum., Am. c., Am. m., Anac., Ant. c., Apis, Arg. m., Arg. n., Ars., Ars. m., Aur.,;  
