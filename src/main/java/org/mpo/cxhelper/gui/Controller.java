@@ -27,7 +27,8 @@ public class Controller {
     public TextArea text_areaOccurences;
     public TextField text_fieldFind;
     private FileChooser fileChooser = new FileChooser();
-   // TextProcessor textProcessor;
+
+    // TextProcessor textProcessor;
     public Controller() {
         //set some system props - does not have access to fxml scene
         System.out.println("first");
@@ -41,17 +42,17 @@ public class Controller {
         btn_findOccurences.setVisible(false);
     }
 
-    public void handle_text_field_key_pressFind(ActionEvent event){
-        Matcher matcher = TextProcessor.findString(text_fieldFind.getText(),text_areaOccurences.getText());
-        if(matcher!=null)
-        text_areaOccurences.selectRange(matcher.start(), matcher.end());
+    public void handle_text_field_key_pressFind(ActionEvent event) {
+        Matcher matcher = TextProcessor.findString(text_fieldFind.getText(), text_areaOccurences.getText());
+        if (matcher != null)
+            text_areaOccurences.selectRange(matcher.start(), matcher.end());
     }
 
-    public void btnp_findOccurences(ActionEvent event){
+    public void btnp_findOccurences(ActionEvent event) {
         text_areaOccurences.clear();
         System.out.println("Button findOccurences was pressed!");
-        Map<String, Integer> occurences =  TextProcessor.findOccurences();
-        occurences.entrySet().forEach(m->text_areaOccurences.appendText(m.getKey() + " : "+ m.getValue()+"\n"));
+        Map<String, Integer> occurences = TextProcessor.findOccurences();
+        occurences.entrySet().forEach(m -> text_areaOccurences.appendText(m.getKey() + " : " + m.getValue() + "\n"));
     }
 
     public void btnp_loadFile(ActionEvent event) throws IOException {
@@ -59,10 +60,10 @@ public class Controller {
         File file = fileChooser.showOpenDialog(stage);
         text_areaFileShow.clear();
         if (file != null) {
-            List<String> remedies =TextProcessor.preProcessText(file);
-            remedies.forEach(m->text_areaFileShow.appendText(m+"\n"));
+            List<String> remedies = TextProcessor.preProcessText(file);
+            remedies.forEach(m -> text_areaFileShow.appendText(m + "\n"));
         }
-        if(!TextProcessor.remedies.isEmpty()){
+        if ((TextProcessor.remedies != null) && (!TextProcessor.remedies.isEmpty())) {
             btn_findOccurences.setVisible(true);
         }
 
