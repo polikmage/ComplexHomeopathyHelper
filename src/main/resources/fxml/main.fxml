@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
 
-<Pane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mpo.cxhelper.gui.Controller">
+<Pane prefHeight="846.0" prefWidth="1422.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mpo.cxhelper.gui.Controller">
    <children>
-      <Button fx:id="btn_findOccurences" layoutX="521.0" layoutY="707.0" mnemonicParsing="false" onAction="#btnp_findOccurences" prefHeight="40.0" prefWidth="116.0" text="Find Occurences" />
-      <TextArea fx:id="text_areaFileShow" layoutX="14.0" layoutY="53.0" prefHeight="642.0" prefWidth="500.0" text="C:\Users\marek.pola\Documents\moje\homeo" />
-      <TextArea fx:id="text_areaOccurences" layoutX="521.0" layoutY="53.0" prefHeight="642.0" prefWidth="500.0" />
-      <Button fx:id="btn_loadFile" layoutX="396.0" layoutY="706.0" mnemonicParsing="false" onAction="#btnp_loadFile" prefHeight="40.0" prefWidth="116.0" text="Load File" />
-      <TextField fx:id="text_fieldFind" layoutX="852.0" layoutY="714.0" onAction="#handle_text_field_key_pressFind" />
-      <Label layoutX="809.0" layoutY="718.0" text="Search" />
+      <Button fx:id="btn_findOccurences" layoutX="1103.0" layoutY="788.0" mnemonicParsing="false" onAction="#btnp_findOccurences" prefHeight="25.0" prefWidth="108.0" text="Find Occurences" />
+      <TextArea fx:id="text_areaOccurences" layoutX="1293.0" layoutY="51.0" prefHeight="717.0" prefWidth="108.0" />
+      <Button fx:id="btn_loadFile" layoutX="14.0" layoutY="808.0" mnemonicParsing="false" onAction="#btnp_loadFile" prefHeight="17.0" prefWidth="116.0" text="Load Text File" />
+      <TextField fx:id="text_fieldFindRemedy" layoutX="905.0" layoutY="794.0" onAction="#handle_text_field_key_pressFindRemedy" />
+      <Label layoutX="938.0" layoutY="781.0" text="Search Remedy" />
+      <Button fx:id="btn_processHtmlToText" layoutX="14.0" layoutY="779.0" mnemonicParsing="false" onAction="#btnp_loadAndProcessHtml" prefHeight="25.0" prefWidth="116.0" text="Load Html" />
+      <TextArea fx:id="text_areaHtmlShow" layoutX="14.0" layoutY="51.0" prefHeight="717.0" prefWidth="680.0" />
+      <TextField fx:id="text_fieldFindSymptome" layoutX="312.0" layoutY="802.0" onAction="#handle_text_field_key_pressFindSymptome" />
+      <Label layoutX="220.0" layoutY="27.0" text="All Repertory Symptoms" />
+      <Label layoutX="1316.0" layoutY="27.0" text="Occurences" />
+      <Label layoutX="967.0" layoutY="27.0" text="Selected Symptoms" />
+      <TextArea fx:id="text_areaSelectSymptomes" layoutX="700.0" layoutY="51.0" prefHeight="717.0" prefWidth="585.0" />
+      <Button fx:id="btn_selectSymptome" layoutX="142.0" layoutY="779.0" mnemonicParsing="false" onAction="#btnp_selectSymptome" prefHeight="25.0" prefWidth="128.0" text="Select Symptome" />
+      <Label layoutX="338.0" layoutY="789.0" text="Search Symptome" />
+      <Button fx:id="btn_unselectSymptome" layoutX="142.0" layoutY="808.0" mnemonicParsing="false" onAction="#btnp_unSelectSymptome" prefHeight="25.0" prefWidth="128.0" text="Unselect Symptome" />
    </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
 </Pane>

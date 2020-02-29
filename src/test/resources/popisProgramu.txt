@@ -17,3 +17,9 @@ Example
 
 nux.v. 10
 Ign. 6
+
+
+2. preprocess text from free web repertory
+    - change html formated file to pure text file with remedy grades denoted by stars *, **, ***, **** to be useful with this application
+
+// Boericke repertory used
